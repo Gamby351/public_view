@@ -1,0 +1,85 @@
+{
+  "view_objects": [
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "avail_type",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/avail_type/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "package_sales",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/package_sales/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "premium_position",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/premium_position/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "sales_channel",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/sales_channel/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "sales_product",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/sales_product/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "sales_schedule_group",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/sales_schedule_group/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "sales_schedule_group",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/sales_schedule_group/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "section_type",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/section_type/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    },
+    {
+      "project": "skyita-da-daita",
+      "dataset_id": "advertising_linear_management_view",
+      "view_name": "spot_type",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/spot_type/view/view.sql",
+      "source_projects": {
+        "source_project_daita": "skyita-da-daita"
+      }
+    }
+  ]
+}

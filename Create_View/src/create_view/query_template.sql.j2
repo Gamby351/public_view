@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------------
+-- Description: Vista per la TS in Full {{ dataset }}.{{ table_name }}
+-- Epic Link: https://agile.at.sky/browse/DPAEP-1508
+-- DM: Klodiana Cika
+-- PK: {{ primary_key }}
+--------------------------------------------------------------------------------
+
+SELECT
+    {{ columns | join(',\n    ') }},
+FROM `{{ ph }}.{{ dataset }}.{{ table_name }}`
+WHERE {{ primary_key }} IS NOT NULL
+AND DATE(partition_date) = DATE((
+      SELECT MAX(PARSE_DATE("%Y%m%d",partition_id))
+      FROM `{{ ph }}.{{ dataset }}.INFORMATION_SCHEMA.PARTITIONS`
+      WHERE table_name="{{ table_name }}" AND partition_id!="__NULL__"
+    ))
+QUALIFY ROW_NUMBER() OVER (PARTITION BY {{ primary_key }} ORDER BY _process_mapping_start_ts DESC)= 1

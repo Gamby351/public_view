@@ -1,0 +1,32 @@
+project:
+  - proj: skyita-da-daita-test
+    ph: $source_project_daita
+
+tables:
+  - table: avail_type
+    dataset: advertising_linear_management
+    primary_key: id_avail_type
+  - table: package_sales
+    dataset: advertising_linear_management
+    primary_key: id_package_sales
+  - table: premium_position
+    dataset: advertising_linear_management
+    primary_key: id_premium_position
+  - table: sales_channel
+    dataset: advertising_linear_management
+    primary_key: id_sales_channel
+  - table: sales_product
+    dataset: advertising_linear_management
+    primary_key: id_sales_product
+  - table: sales_schedule_group
+    dataset: advertising_linear_management
+    primary_key: id_sales_schedule_group
+  - table: sales_schedule_group
+    dataset: advertising_linear_management
+    primary_key: id_sales_schedule_group,id_sales_channel
+  - table: section_type
+    dataset: advertising_linear_management
+    primary_key: id_section_type
+  - table: spot_type
+    dataset: advertising_linear_management
+    primary_key: id_spot_type
