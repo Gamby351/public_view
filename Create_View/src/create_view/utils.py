@@ -1,4 +1,5 @@
 import yaml
+import json
 from google.cloud import bigquery
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -45,8 +46,6 @@ def save_query_to_file(query, table_name, base_output_dir="advertising_linear_ma
         f.write(query)
 
     print(f"✅ Query salvata in '{output_file}'")
-
-import json
 
 def write_config_json(table_names, output_path="advertising_linear_management_view/config.json"):
     view_objects = []

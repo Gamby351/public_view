@@ -57,8 +57,8 @@
     {
       "project": "skyita-da-daita",
       "dataset_id": "advertising_linear_management_view",
-      "view_name": "sales_schedule_group",
-      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/sales_schedule_group/view/view.sql",
+      "view_name": "channel_schedule_group",
+      "query_path": "$CONFIG_PATH/flow/advertising_linear_management_view/channel_schedule_group/view/view.sql",
       "source_projects": {
         "source_project_daita": "skyita-da-daita"
       }

@@ -2,7 +2,7 @@
 -- Description: Vista per la TS in Full advertising_linear_management.premium_position
 -- Epic Link: https://agile.at.sky/browse/DPAEP-1508
 -- DM: Klodiana Cika
--- PK: id_premium_position
+-- PK: ['id_premium_position']
 --------------------------------------------------------------------------------
 
 SELECT
@@ -28,4 +28,4 @@ AND DATE(partition_date) = DATE((
       FROM `$source_project_daita.advertising_linear_management.INFORMATION_SCHEMA.PARTITIONS`
       WHERE table_name="premium_position" AND partition_id!="__NULL__"
     ))
-QUALIFY ROW_NUMBER() OVER (PARTITION BY id_premium_position ORDER BY _process_mapping_start_ts DESC)= 1
+QUALIFY ROW_NUMBER() OVER (PARTITION BY ['id_premium_position'] ORDER BY _process_mapping_start_ts DESC)= 1

@@ -2,7 +2,7 @@
 -- Description: Vista per la TS in Full advertising_linear_management.sales_schedule_group
 -- Epic Link: https://agile.at.sky/browse/DPAEP-1508
 -- DM: Klodiana Cika
--- PK: id_sales_schedule_group,id_sales_channel
+-- PK: ['id_sales_schedule_group']
 --------------------------------------------------------------------------------
 
 SELECT
@@ -24,10 +24,10 @@ SELECT
     _ingest_schema_version,
     _ingestion_file_name,
 FROM `$source_project_daita.advertising_linear_management.sales_schedule_group`
-WHERE id_sales_schedule_group,id_sales_channel IS NOT NULL
+WHERE id_sales_schedule_group IS NOT NULL
 AND DATE(partition_date) = DATE((
       SELECT MAX(PARSE_DATE("%Y%m%d",partition_id))
       FROM `$source_project_daita.advertising_linear_management.INFORMATION_SCHEMA.PARTITIONS`
       WHERE table_name="sales_schedule_group" AND partition_id!="__NULL__"
     ))
-QUALIFY ROW_NUMBER() OVER (PARTITION BY id_sales_schedule_group,id_sales_channel ORDER BY _process_mapping_start_ts DESC)= 1
+QUALIFY ROW_NUMBER() OVER (PARTITION BY ['id_sales_schedule_group'] ORDER BY _process_mapping_start_ts DESC)= 1

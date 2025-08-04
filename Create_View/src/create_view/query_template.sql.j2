@@ -8,7 +8,8 @@
 SELECT
     {{ columns | join(',\n    ') }},
 FROM `{{ ph }}.{{ dataset }}.{{ table_name }}`
-WHERE {{ primary_key }} IS NOT NULL
+WHERE {%- for pk in primary_key %}{{ " AND " if not loop.first else "" }} {{ pk }} IS NOT NULL
+    {%- endfor %}
 AND DATE(partition_date) = DATE((
       SELECT MAX(PARSE_DATE("%Y%m%d",partition_id))
       FROM `{{ ph }}.{{ dataset }}.INFORMATION_SCHEMA.PARTITIONS`

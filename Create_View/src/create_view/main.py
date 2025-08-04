@@ -15,7 +15,7 @@ def main():
 
     for entry in tables:
         table_id = entry["table_id"]
-        primary_key = entry["primary_key"]
+        primary_key = [key.strip() for key in entry["primary_key"].split(',')]
         ph = entry["ph"]
         dataset = entry["dataset"]
         table_name = entry["table_name"]
