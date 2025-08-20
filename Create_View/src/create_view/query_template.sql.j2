@@ -15,4 +15,4 @@ AND DATE(partition_date) = DATE((
       FROM `{{ ph }}.{{ dataset }}.INFORMATION_SCHEMA.PARTITIONS`
       WHERE table_name="{{ table_name }}" AND partition_id!="__NULL__"
     ))
-QUALIFY ROW_NUMBER() OVER (PARTITION BY {{ primary_key }} ORDER BY _process_mapping_start_ts DESC)= 1
+QUALIFY ROW_NUMBER() OVER (PARTITION BY {{ primary_key | join(', ') }} ORDER BY _process_mapping_start_ts DESC)= 1

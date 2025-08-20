@@ -3,30 +3,21 @@ project:
     ph: $source_project_daita
 
 tables:
-  - table: avail_type
+  - table: commercial_key_number
     dataset: advertising_linear_management
-    primary_key: id_avail_type
-  - table: package_sales
+    primary_key: id_commercial_key_number
+  - table: customer
     dataset: advertising_linear_management
-    primary_key: id_package_sales
-  - table: premium_position
+    primary_key: id_customer
+  - table: organization_invoicing_pref
     dataset: advertising_linear_management
-    primary_key: id_premium_position
-  - table: sales_channel
+    primary_key: id_organisation
+  - table: organisation
     dataset: advertising_linear_management
-    primary_key: id_sales_channel
-  - table: sales_product
+    primary_key: id_organisation
+  - table: period
     dataset: advertising_linear_management
-    primary_key: id_sales_product
-  - table: sales_schedule_group
+    primary_key: id_period
+  - table: sales_prod_daypart
     dataset: advertising_linear_management
-    primary_key: id_sales_schedule_group
-  - table: channel_schedule_group
-    dataset: advertising_linear_management
-    primary_key: id_sales_channel_schedule_group,id_sales_channel
-  - table: section_type
-    dataset: advertising_linear_management
-    primary_key: id_section_type
-  - table: spot_type
-    dataset: advertising_linear_management
-    primary_key: id_spot_type
+    primary_key: id_sales_product_base
